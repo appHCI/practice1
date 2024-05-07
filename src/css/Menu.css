@@ -1,0 +1,24 @@
+.MenuLayout {
+  width: 375px;
+  height: 812px;
+  background-color: rgb(255, 245, 232);
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+
+  .logo {
+    width: 277px;
+    height: 80px;
+    /* background-color: aqua; */
+    padding-top: 350px;
+    margin-left: 80px;
+
+    .iconmargin {
+      margin-right: 2px;
+    }
+  }
+
+  .Menus {
+    margin-left: 80px;
+  }
+}
