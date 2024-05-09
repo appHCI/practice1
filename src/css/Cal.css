@@ -44,3 +44,26 @@
 .CalendarBox {
   margin-bottom: 20px; /* 하단 여백 추가 */
 }
+
+.check {
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.check:hover {
+  cursor: pointer;
+}
+
+.stat {
+  margin-left: 220px;
+}
+.stat:hover {
+  cursor: pointer;
+}
+
+.calUser {
+  margin-left: 10px;
+}
+
+.calUser:hover {
+  cursor: pointer;
+}

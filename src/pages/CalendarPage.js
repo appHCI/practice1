@@ -1,7 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 import "../css/Cal.css";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import { ReactComponent as Check } from "../assets/check.svg";
+import { ReactComponent as Stat } from "../assets/stat.svg";
+import { ReactComponent as User } from "../assets/user.svg";
 
 import * as faceLandmarksDetection from "@tensorflow-models/face-landmarks-detection";
 import * as tf from "@tensorflow/tfjs";
@@ -16,7 +21,19 @@ function CalendarPage() {
   const videoRef = useRef(null);
   const modelRef = useRef(null);
   const emotionModelRef = useRef(null);
+  const navigate = useNavigate();
 
+  const navigateToStatPage = () => {
+    navigate("/stat");
+  };
+
+  const navigateToMyPage = () => {
+    navigate("/my");
+  };
+
+  const navigateToDiaryPage = () => {
+    navigate("/diary");
+  };
   useEffect(() => {
     const loadModels = async () => {
       const modelConfig = {
@@ -120,9 +137,17 @@ function CalendarPage() {
 
   return (
     <div className="CalendarLayout">
-      <header>Menus</header>
+      <div>
+        <Check className="check" />
+        <Stat className="stat" onClick={navigateToStatPage} />
+        <User className="calUser" onClick={navigateToMyPage} />
+      </div>
       <div className="CalendarBox">
-        <Calendar onChange={onChange} value={value} />
+        <Calendar
+          onChange={onChange}
+          value={value}
+          onClickDay={navigateToDiaryPage}
+        />
       </div>
       <div className="CameraBox">
         <video

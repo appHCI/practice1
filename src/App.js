@@ -3,6 +3,7 @@ import My from "./pages/My";
 import Stat from "./pages/Stat";
 import Menu from "./Menu";
 import Challenge from "./pages/Challenge";
+import Diary from "./pages/Diary";
 
 import { Route, Routes } from "react-router-dom";
 import React from "react";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/my" element={<My />}></Route>
         <Route path="/stat" element={<Stat />}></Route>
         <Route path="/challenge" element={<Challenge />}></Route>
+        <Route path="/diary" element={<Diary />}></Route>
       </Routes>
     </div>
   );

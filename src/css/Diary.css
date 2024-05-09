@@ -1,0 +1,29 @@
+.diaryLayout {
+  width: 375px;
+  height: 812px;
+  background-color: rgb(255, 245, 232);
+}
+
+.diaryBack {
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+.diaryMood {
+  width: 56px;
+  height: 56px;
+  margin-top: 20%;
+  margin-left: 42%;
+}
+
+.date {
+  margin-left: 28%;
+  margin-top: 10px;
+}
+
+.diaryText {
+  margin-left: 17%;
+  margin-top: 20px;
+  width: 250px;
+  height: 400px;
+}
