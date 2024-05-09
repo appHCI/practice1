@@ -5,7 +5,10 @@ import { ReactComponent as Notice } from "../assets/notice.svg";
 import { ReactComponent as NotiEllipse } from "../assets/notiEllipse.svg";
 import { ReactComponent as NotiRect } from "../assets/notiRect.svg";
 import { ReactComponent as Font } from "../assets/font.svg";
-
+import { ReactComponent as Setting } from "../assets/setting.svg";
+import { ReactComponent as Lock } from "../assets/lock.svg";
+import { ReactComponent as Lang } from "../assets/lang.svg";
+import { ReactComponent as Rate } from "../assets/rate.svg";
 import { useNavigate } from "react-router-dom";
 
 function My() {
@@ -59,6 +62,7 @@ function My() {
           <NotiRect className="notiRect" />
         </div>
         <div>
+          <Setting className="setting" />
           <div
             style={{
               left: 59,
@@ -99,10 +103,11 @@ function My() {
           />
         </div>
         <div>
+          <Lock className="lock" />
           <div
             style={{
               left: 59,
-              top: 340,
+              top: 352,
               position: "absolute",
               fontSize: 16,
               fontFamily: "Edu Favorit Hangul",
@@ -115,10 +120,11 @@ function My() {
           <NotiRect className="screenRect" />
         </div>
         <div>
+          <Lang className="lang" />
           <div
             style={{
               left: 59,
-              top: 380,
+              top: 387,
               position: "absolute",
               fontSize: 16,
               fontFamily: "Edu Favorit Hangul",
@@ -130,7 +136,7 @@ function My() {
           <div
             style={{
               left: 290,
-              top: 382,
+              top: 390,
               position: "absolute",
               fontSize: 13,
               fontFamily: "Edu Favorit Hangul",
@@ -145,16 +151,17 @@ function My() {
               width: 326,
               height: 0,
               left: 25,
-              top: 420,
+              top: 430,
               position: "absolute",
               border: "0.70px #757575 solid",
             }}
           />
         </div>
+        <Rate className="rate" />
         <div
           style={{
             left: 59,
-            top: 445,
+            top: 447,
             position: "absolute",
             fontSize: 16,
             fontFamily: "Edu Favorit Hangul",

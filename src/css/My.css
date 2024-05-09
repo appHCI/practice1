@@ -34,15 +34,34 @@
 }
 
 .font {
-  margin-top: 51px;
+  margin-top: 13px;
   margin-left: 31px;
 }
 
 .screenEllipse {
-  margin-left: 285px;
-  margin-top: 35px;
+  margin-left: 235px;
+  margin-top: 40px;
 }
 
 .screenRect {
-  margin-left: -27px;
+  margin-left: -28px;
+}
+
+.setting {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.lock {
+  margin-left: 35px;
+}
+
+.lang {
+  margin-top: 15px;
+  margin-left: 33px;
+}
+
+.rate {
+  margin-top: 40px;
+  margin-left: 33px;
 }
