@@ -1,0 +1,29 @@
+.CalendarLayout {
+  width: 375px;
+  height: 812px;
+  background-color: rgb(255, 245, 232);
+}
+.CalendarBox {
+  margin-left: 42px;
+  width: 286px;
+  height: 286px;
+  margin-top: 20%;
+}
+
+.CameraButton {
+  margin-top: 50px;
+  margin-left: 270px;
+  width: 50px;
+  height: 50px;
+  .camera {
+    text-decoration: none;
+    display: inline-block;
+    width: 60px;
+    background-color: rgb(113, 156, 202);
+    border: none;
+    border-radius: 4px;
+  }
+  .camera:hover {
+    cursor: pointer;
+  }
+}

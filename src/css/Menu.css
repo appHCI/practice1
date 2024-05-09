@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
+
+.MenuLayout {
+  width: 375px;
+  height: 812px;
+  background-color: rgb(255, 245, 232);
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+
+  .logo {
+    width: 277px;
+    height: 80px;
+    /* background-color: aqua; */
+    padding-top: 350px;
+    margin-left: 80px;
+
+    .iconmargin {
+      margin-right: 2px;
+    }
+  }
+
+  .Menus {
+    margin-left: 80px;
+  }
+
+  .start {
+    margin-left: 140px;
+
+    /* font-family: Roboto, sans-serif;
+    font-weight: 0;
+    font-size: 14px; */
+    color: #fff;
+    background: linear-gradient(90deg, #efcd88 0%, #ff5900 100%);
+    padding: 10px 30px;
+    border: solid #ffd3c0 2px;
+    box-shadow: rgb(227, 200, 200) 5px 5px 25px 5px;
+    border-radius: 50px;
+    transition: 1000ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .start:hover {
+    cursor: pointer;
+  }
+}
