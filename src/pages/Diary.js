@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "../css/Diary.css";
 import { ReactComponent as Back } from "../assets/back.svg";
 import { ReactComponent as Middle } from "../assets/middle.svg";
+import { ReactComponent as DCheck } from "../assets/dcheck.svg";
 
 function Diary() {
   const navigate = useNavigate();
@@ -18,6 +19,9 @@ function Diary() {
       </div>
       <div className="date">Sunday, April 7, 2024</div>
       <textarea className="diaryText" />
+      <div>
+        <DCheck className="diarySave" />
+      </div>
     </div>
   );
 }

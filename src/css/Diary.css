@@ -8,6 +8,9 @@
   margin-left: 20px;
   margin-top: 40px;
 }
+.diaryBack:hover {
+  cursor: pointer;
+}
 
 .diaryMood {
   width: 56px;
@@ -26,4 +29,12 @@
   margin-top: 20px;
   width: 250px;
   height: 400px;
+}
+
+.diarySave {
+  margin-left: 79%;
+  margin-top: 10px;
+}
+.diarySave:hover {
+  cursor: pointer;
 }
