@@ -49,8 +49,8 @@ function Challenge() {
             <Angry className="chAngry" />
           </div>
           <div>
-            <Sad className="chSad" />
             <Normal className="chNormal" />
+            <Sad className="chSad" />
           </div>
         </div>
         <div
@@ -95,7 +95,7 @@ function Challenge() {
         className="Ongoing"
         style={{
           left: 24,
-          top: 111,
+          top: 93,
           position: "absolute",
           color: "black",
           fontSize: 14,

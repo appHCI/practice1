@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "../css/Cal.css";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import { ReactComponent as Check } from "../assets/check.svg";
+import { ReactComponent as Challenge } from "../assets/chall.svg";
 import { ReactComponent as Stat } from "../assets/stat.svg";
 import { ReactComponent as User } from "../assets/user.svg";
 
@@ -29,6 +29,10 @@ function CalendarPage() {
 
   const navigateToMyPage = () => {
     navigate("/my");
+  };
+
+  const navigateToChallengePage = () => {
+    navigate("/challenge");
   };
 
   const navigateToDiaryPage = () => {
@@ -138,7 +142,7 @@ function CalendarPage() {
   return (
     <div className="CalendarLayout">
       <div>
-        <Check className="check" />
+        <Challenge className="check" onClick={navigateToChallengePage} />
         <Stat className="stat" onClick={navigateToStatPage} />
         <User className="calUser" onClick={navigateToMyPage} />
       </div>
