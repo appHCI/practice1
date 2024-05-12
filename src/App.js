@@ -4,6 +4,7 @@ import Stat from "./pages/Stat";
 import Menu from "./Menu";
 import Challenge from "./pages/Challenge";
 import Diary from "./pages/Diary";
+import Face from "./pages/Face";
 
 import { Route, Routes } from "react-router-dom";
 import React from "react";
@@ -20,6 +21,7 @@ function App() {
         <Route path="/stat" element={<Stat />}></Route>
         <Route path="/challenge" element={<Challenge />}></Route>
         <Route path="/diary" element={<Diary />}></Route>
+        <Route path="/face" element={<Face />}></Route>
       </Routes>
     </div>
   );
