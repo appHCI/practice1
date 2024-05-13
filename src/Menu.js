@@ -30,15 +30,6 @@ function Menu() {
           Start
         </button>
       </div>
-      <div className="Menus">
-        <Link to="/calendar">Calendar</Link>
-        <br />
-        <Link to="/my">My</Link>
-        <br />
-        <Link to="/stat">Stat</Link>
-        <br />
-        <Link to="/challenge">Challenge</Link>
-      </div>
     </div>
   );
 }

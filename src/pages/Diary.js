@@ -17,10 +17,10 @@ function Diary() {
       <div>
         <Middle className="diaryMood" />
       </div>
-      <div className="date">Sunday, April 7, 2024</div>
+      <div className="date">Thursday, May 23, 2024</div>
       <textarea className="diaryText" />
       <div>
-        <DCheck className="diarySave" />
+        <DCheck className="diarySave" onClick={() => navigate(-1)} />
       </div>
     </div>
   );

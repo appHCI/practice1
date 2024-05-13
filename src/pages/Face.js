@@ -1,5 +1,6 @@
 import * as faceapi from "face-api.js";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Face() {
   const [modelsLoaded, setModelsLoaded] = React.useState(false);
@@ -9,6 +10,7 @@ function Face() {
   const videoHeight = 480;
   const videoWidth = 640;
   const canvasRef = React.useRef();
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     const loadModels = async () => {
@@ -19,7 +21,7 @@ function Face() {
         faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
         faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
         faceapi.nets.faceExpressionNet.loadFromUri("/models"),
-      ]).then(() => setModelsLoaded(true));
+      ]).then(setModelsLoaded(true));
     };
     loadModels();
   }, []);
@@ -60,7 +62,7 @@ function Face() {
           )
           .withFaceLandmarks()
           .withFaceExpressions();
-
+        // console.log(getMaxValueKey(detections[0].expressions));
         console.log(
           detections[0] && detections[0].expressions
             ? getMaxValueKey(detections[0].expressions)
@@ -72,21 +74,30 @@ function Face() {
           displaySize
         );
 
-        canvasRef.current
-          .getContext("2d")
-          .clearRect(0, 0, videoWidth, videoHeight);
-        faceapi.draw.drawDetections(canvasRef.current, resizedDetections);
-        faceapi.draw.drawFaceLandmarks(canvasRef.current, resizedDetections);
-        faceapi.draw.drawFaceExpressions(canvasRef.current, resizedDetections);
+        canvasRef &&
+          canvasRef.current &&
+          canvasRef.current
+            .getContext("2d")
+            .clearRect(0, 0, videoWidth, videoHeight);
+        canvasRef &&
+          canvasRef.current &&
+          faceapi.draw.drawDetections(canvasRef.current, resizedDetections);
+        canvasRef &&
+          canvasRef.current &&
+          faceapi.draw.drawFaceLandmarks(canvasRef.current, resizedDetections);
+        canvasRef &&
+          canvasRef.current &&
+          faceapi.draw.drawFaceExpressions(
+            canvasRef.current,
+            resizedDetections
+          );
       }
     }, 500);
   };
 
   const closeWebcam = () => {
-    if (videoRef.current.srcObject) {
-      videoRef.current.srcObject.getTracks().forEach((track) => track.stop());
-    }
     videoRef.current.pause();
+    videoRef.current.srcObject.getTracks()[0].stop();
     setCaptureVideo(false);
   };
 
@@ -94,20 +105,37 @@ function Face() {
     <div>
       <div style={{ textAlign: "center", padding: "10px" }}>
         {captureVideo && modelsLoaded ? (
-          <button
-            onClick={closeWebcam}
-            style={{
-              cursor: "pointer",
-              backgroundColor: "green",
-              color: "white",
-              padding: "15px",
-              fontSize: "25px",
-              border: "none",
-              borderRadius: "10px",
-            }}
-          >
-            Close Webcam
-          </button>
+          <div>
+            <button
+              onClick={closeWebcam}
+              style={{
+                cursor: "pointer",
+                backgroundColor: "green",
+                color: "white",
+                padding: "15px",
+                fontSize: "25px",
+                border: "none",
+                borderRadius: "10px",
+                margin: "10px",
+              }}
+            >
+              Close Webcam
+            </button>
+            <button
+              style={{
+                cursor: "pointer",
+                backgroundColor: "green",
+                color: "white",
+                padding: "10px",
+                fontSize: "25px",
+                border: "none",
+                borderRadius: "10px",
+              }}
+              onClick={() => navigate(-1)}
+            >
+              save
+            </button>
+          </div>
         ) : (
           <button
             onClick={startVideo}
