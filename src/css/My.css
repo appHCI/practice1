@@ -1,0 +1,28 @@
+.My {
+  width: 375px;
+  height: 812px;
+  position: "relative";
+  background: rgba(175, 54, 54, 0.5);
+}
+.Image34 {
+  width: 376px;
+  height: 812px;
+  left: -1px;
+  top: 0;
+  position: "absolute";
+}
+.Rectangle14 {
+  width: 375px;
+  height: 812px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: #fff5e8;
+}
+.Login {
+  left: 59;
+  top: 133;
+  position: "absolute";
+  color: black;
+  fontsize: 16;
+}
