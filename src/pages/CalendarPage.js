@@ -6,6 +6,7 @@ import { ReactComponent as User } from "../assets/user.svg";
 import "../css/Cal.css";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import moment from "moment";
 
 const CONSTRAINTS = { video: true };
 
@@ -26,10 +27,6 @@ function CalendarPage() {
     navigate("/challenge");
   };
 
-  const navigateToDiaryPage = () => {
-    navigate("/diary");
-  };
-
   const navigateToCameraPage = () => {
     navigate("/face");
   };
@@ -43,16 +40,12 @@ function CalendarPage() {
       </div>
       <div className="CalendarBox">
         <Calendar
+          locale="en"
           onChange={onChange}
           value={value}
-          onClickDay={navigateToDiaryPage}
+          formatDay={(locale, date) => moment(date).format("DD")}
+          onClickDay={navigateToCameraPage}
         />
-      </div>
-
-      <div className="CameraButton">
-        <button className="camera" onClick={navigateToCameraPage}>
-          camera
-        </button>
       </div>
     </div>
   );

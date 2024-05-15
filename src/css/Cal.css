@@ -4,13 +4,11 @@
   background-color: rgb(255, 245, 232);
 }
 .CalendarBox {
-  margin-left: 42px;
-  margin-top: 170px;
-  width: 286px;
-  height: 286px;
+  margin-left: 10px;
+  margin-top: 150px;
 }
 
-.CameraButton {
+/* .CameraButton {
   margin-top: 50px;
   margin-left: 270px;
   width: 50px;
@@ -26,7 +24,7 @@
   .camera:hover {
     cursor: pointer;
   }
-}
+} */
 
 /* Cal.css 파일에 추가 */
 .CameraView {
@@ -40,7 +38,7 @@
 }
 
 /* 카메라와 캘린더 박스 간의 여백 추가 */
-.CameraBox,
+
 .CalendarBox {
   margin-bottom: 20px; /* 하단 여백 추가 */
 }
@@ -66,4 +64,73 @@
 
 .calUser:hover {
   cursor: pointer;
+}
+
+.react-calendar {
+  border: none;
+  width: 350px;
+  max-width: 350px;
+  background: #ffffff00;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.react-calendar__navigation {
+  background: rgb(240, 182, 182);
+  border-bottom: 2px solid rgb(48, 20, 7);
+  height: 90px;
+  border-radius: 0 0 0 0;
+
+  span {
+    font-weight: 600;
+    color: rgb(37, 30, 27);
+  }
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: rgb(240, 182, 182);
+  border-radius: 20px 20px 0 0;
+}
+
+.react-calendar__month-view {
+  padding: 12px 20px;
+  abbr {
+    color: rgb(48, 20, 7);
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+.react-calendar__month-view__weekdays {
+  abbr {
+    font-size: 14px;
+    font-weight: 900;
+  }
+}
+
+.react-calendar__tile {
+  text-align: center;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/*hover, focus, 선택됐을 시 */
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus,
+.react-calendar__tile--active {
+  background: rgb(178, 178, 255);
+  border-radius: 14px;
+}
+
+.react-calendar__tile--now {
+  background: rgb(218, 255, 178);
+  border-radius: 14px;
+}
+/*hover, focus 시 */
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: rgb(178, 178, 255);
+  border-radius: 14px;
 }

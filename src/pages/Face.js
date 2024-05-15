@@ -5,12 +5,19 @@ import { useNavigate } from "react-router-dom";
 function Face() {
   const [modelsLoaded, setModelsLoaded] = React.useState(false);
   const [captureVideo, setCaptureVideo] = React.useState(false);
+  // 감정 상태 추가
+  const [emotion, setEmotion] = React.useState("");
 
   const videoRef = React.useRef();
   const videoHeight = 480;
   const videoWidth = 640;
   const canvasRef = React.useRef();
   const navigate = useNavigate();
+
+  // navigateToDiaryPage 함수 수정
+  const navigateToDiaryPage = () => {
+    navigate(`/diary?emotion=${encodeURIComponent(emotion)}`);
+  };
 
   React.useEffect(() => {
     const loadModels = async () => {
@@ -62,12 +69,15 @@ function Face() {
           )
           .withFaceLandmarks()
           .withFaceExpressions();
-        // console.log(getMaxValueKey(detections[0].expressions));
-        console.log(
+
+        const maxEmotion =
           detections[0] && detections[0].expressions
             ? getMaxValueKey(detections[0].expressions)
-            : null
-        );
+            : null;
+        // 감정 상태 업데이트
+        setEmotion(maxEmotion);
+
+        console.log(maxEmotion);
 
         const resizedDetections = faceapi.resizeResults(
           detections,
@@ -131,9 +141,9 @@ function Face() {
                 border: "none",
                 borderRadius: "10px",
               }}
-              onClick={() => navigate(-1)}
+              onClick={navigateToDiaryPage}
             >
-              save
+              Save
             </button>
           </div>
         ) : (
