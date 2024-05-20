@@ -3,7 +3,7 @@ import { ReactComponent as Cal } from "../assets/cal.svg";
 import { ReactComponent as User } from "../assets/user.svg";
 import { ReactComponent as Angry } from "../assets/angry.svg";
 import { ReactComponent as Middle } from "../assets/middle.svg";
-import { ReactComponent as Normal } from "../assets/normal.svg";
+import { ReactComponent as Surprised } from "../assets/surprised.svg";
 import { ReactComponent as Happy } from "../assets/happy.svg";
 import { ReactComponent as Sad } from "../assets/sad.svg";
 import "../css/Stat.css";
@@ -560,8 +560,6 @@ function Stat() {
       </div>
       <div
         style={{
-          width: 40.86,
-          height: 40.86,
           left: 105,
           top: 471,
           position: "absolute",
@@ -571,19 +569,15 @@ function Stat() {
       </div>
       <div
         style={{
-          width: 45.97,
-          height: 45.97,
           left: 166,
-          top: 468,
+          top: 470,
           position: "absolute",
         }}
       >
-        <Normal />
+        <Surprised />
       </div>
       <div
         style={{
-          width: 41.5,
-          height: 45.32,
           left: 229,
           top: 467,
           position: "absolute",
@@ -593,8 +587,6 @@ function Stat() {
       </div>
       <div
         style={{
-          width: 40.23,
-          height: 40.86,
           left: 288,
           top: 469,
           position: "absolute",

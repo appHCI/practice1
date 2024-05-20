@@ -13,7 +13,7 @@ import { ReactComponent as DCheck } from "../assets/dcheck.svg";
 
 import { ReactComponent as Angry } from "../assets/angry.svg";
 import { ReactComponent as Middle } from "../assets/middle.svg";
-import { ReactComponent as Normal } from "../assets/normal.svg";
+import { ReactComponent as Surprised } from "../assets/surprised.svg";
 import { ReactComponent as Happy } from "../assets/happy.svg";
 import { ReactComponent as Sad } from "../assets/sad.svg";
 
@@ -41,7 +41,7 @@ function Diary() {
         {emotion === "sad" ? <Sad className="diaryMood" /> : null}
         {emotion === "angry" ? <Angry className="diaryMood" /> : null}
         {/* 이거 감정뭘로할지 정해야함  */}
-        {emotion === "normal" ? <Normal className="diaryMood" /> : null}
+        {emotion === "surprised" ? <Surprised className="diaryMood" /> : null}
       </div>
       <div className="date">
         Thursday, May 23, 2024

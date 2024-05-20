@@ -1,7 +1,7 @@
 import { ReactComponent as Back } from "../assets/back.svg";
 import { ReactComponent as Angry } from "../assets/angry.svg";
 import { ReactComponent as Middle } from "../assets/middle.svg";
-import { ReactComponent as Normal } from "../assets/normal.svg";
+import { ReactComponent as Surprised } from "../assets/surprised.svg";
 import { ReactComponent as Happy } from "../assets/happy.svg";
 import { ReactComponent as Sad } from "../assets/sad.svg";
 import { useNavigate } from "react-router-dom";
@@ -49,7 +49,7 @@ function Challenge() {
             <Angry className="chAngry" />
           </div>
           <div>
-            <Normal className="chNormal" />
+            <Surprised className="chNormal" />
             <Sad className="chSad" />
           </div>
         </div>
